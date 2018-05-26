@@ -1,0 +1,27 @@
+<h1>Cadastro de Comic Book</h1>
+
+<%= form_for(@comic_book) do |form| %>
+  <div class="form-group">
+    <%= form.label :title, 'Título' %>
+    <%= form.text_field :title, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description, 'Descrição' %>
+    <%= form.text_field :description,  class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :number, 'Número' %>
+    <%= form.text_field :number, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :comic_file, 'Arquivo' %>
+    <%= form.text_field :comic_file, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>
